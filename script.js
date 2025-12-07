@@ -121,7 +121,7 @@ function handleKeyPress(event) {
 }
 
 // Add message to UI
-function addMessage(text, isUser, isLoading = false) {
+function addMessage(finalMessage, isUser, isLoading = false) {
     const row = document.createElement('div');
     row.className = `message-row ${isUser ? 'user' : ''}`;
     
@@ -186,7 +186,7 @@ function clearChat() {
 async function sendMessage() {
     const text = userInput.value.trim();
     if (!text) return;
-
+    let selectedLan = localStorage.getItem("selectedLanguage") || "English";
     // 1. Show User Message
     addMessage(text, true);
     userInput.value = '';
@@ -209,7 +209,8 @@ async function sendMessage() {
             2. If the answer is not in the JSON data, politely say you don't have that information and suggest they contact the school office.
             3. Keep answers concise and easy for students or parents to read.
             4. Use formatting like bullet points if listing items (like events or rules).
-            5. give all answer in gujarati lan.
+            5. give all answer in "${selectedLan}"
+        
         `;
 
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
