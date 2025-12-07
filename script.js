@@ -34,7 +34,7 @@ if (!SpeechRecognition) {
     alert("Speech Recognition not supported in this browser");
 } else {
     const recognition = new SpeechRecognition();
-    recognition.lang = "en-IN,hi-IN,gu-IN";  // English, Hindi, Gujarati
+    recognition.lang = "en-IN, hi-IN";
     recognition.continuous = false;
     recognition.interimResults = false;
 
@@ -45,6 +45,9 @@ if (!SpeechRecognition) {
         recognition.start();
         micBtn.style.background = "#ffdfdf"; // mic active
     });
+
+    console.log(navigator.userAgent);
+console.log("Supported lang:", recognition.lang);
 
     recognition.onstart = () => {
         console.log("Voice recognition started...");
@@ -67,7 +70,7 @@ if (!SpeechRecognition) {
 }
 //voice function end
 // --- CONFIGURATION ---
-const apiKey = "AIzaSyBRtd2AGrc1Q6UVWPNS40VFI9v8fj83bxg"; // API Key is injected by the environment
+const apiKey = "AIzaSyDhUgtpkgKMh0PjKLAa93gXIbuxOWcbl2I"; // API Key is injected by the environment
         
 // --- 1. PASTE YOUR SCHOOL DATA HERE (JSON Format) ---
 const schoolData = {
@@ -206,6 +209,7 @@ async function sendMessage() {
             2. If the answer is not in the JSON data, politely say you don't have that information and suggest they contact the school office.
             3. Keep answers concise and easy for students or parents to read.
             4. Use formatting like bullet points if listing items (like events or rules).
+            5. give all answer in gujarati lan.
         `;
 
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
