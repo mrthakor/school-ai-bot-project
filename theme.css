@@ -1,0 +1,38 @@
+/* LIGHT MODE DEFAULTS */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --chat-bg: #f5f5f5;
+  --bubble-bg-bot: #e9ecef;
+  --bubble-bg-user: #007bff;
+  --user-text-color: #ffffff;
+}
+
+/* DARK MODE OVERRIDES */
+body.dark-mode {
+  --bg-color: #000000;
+  --text-color: #e0e0e0;
+  --chat-bg: #1e1e1e;
+  --bubble-bg-bot: #2c2c2c;
+  --bubble-bg-user: #3f51b5;
+  --user-text-color: #ffffff;
+  background-color: var(--bg-color); /* Apply base background */
+  color: var(--text-color); /* Apply base text color */
+}
+
+/* Apply dark mode to specific components */
+body.dark-mode .header-right .icon-btn,
+body.dark-mode .clear-chat {
+  background-color: var(--bubble-bg-bot);
+  color: var(--text-color);
+}
+
+body.dark-mode #theme{
+  background-color: var(--bubble-bg-bot);
+  color: var(--text-color);
+}
+
+body.dark-mode .message-row.user .message-bubble {
+  background-color: var(--bubble-bg-user);
+  color: var(--user-text-color);
+}

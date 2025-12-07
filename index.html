@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with JUBV.AI</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Markdown Parser for AI Responses -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+
+</head>
+<body >
+
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo">
+                <img style="border-radius:50%;" src="logo-removebg-preview.png" alt="">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </div>
+
+        <div class="header-right">
+            <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+            <button class="icon control-button theme-mode" id="theme">
+                <i class="ri-sun-line"></i>
+            </button>
+
+            <button class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>School <span class="gradient-text">ChatBot (AI)</span></h1>
+            <p class="subtitle">Jagruti U.B Vidhyalay Vareda</p>
+        </section>
+
+        <section class="chat-container">
+            <div class="chat-header">
+                <span class="chat-logo">Ask about shift times, events, syllabus, and more!</span>
+                <button class="clear-chat" onclick="clearChat()">Clear chat</button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will appear here -->
+                <div class="message-row">
+                    <div class="avatar bot-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="message-bubble">
+                        Hello! I am the School Assistant. I can help you with shift timings, exam schedules, and general school information. What would you like to know?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" class="chat-input" id="userInput" placeholder="Ask a question..." onkeypress="handleKeyPress(event)">
+                    <button class="send-btn" id="micBtn">
+                        <i class="ri-mic-ai-fill"></i>
+                    </button>
+                    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<script src="script.js"></script>    
+</body>
+</html>
