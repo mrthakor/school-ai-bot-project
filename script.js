@@ -70,7 +70,7 @@ console.log("Supported lang:", recognition.lang);
 }
 //voice function end
 // --- CONFIGURATION ---
-const apiKey = "AIzaSyDhUgtpkgKMh0PjKLAa93gXIbuxOWcbl2I"; // API Key is injected by the environment
+const apiKey = "AIzaSyBUADekobE9rRVFSsMVg5ioXxkuK8TB1BU"; // API Key is injected by the environment
         
 // --- 1. PASTE YOUR SCHOOL DATA HERE (JSON Format) ---
 const schoolData = {
