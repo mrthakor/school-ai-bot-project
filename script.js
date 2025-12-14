@@ -151,8 +151,10 @@ function sendMessage(voiceText = null) {
             }
         } else {
             // Basic Keyword matching
+        
+        var menubutton=menubtn
             const lowerText = text.toLowerCase();
-            if (lowerText.includes('menu') || lowerText.includes('help')) {
+            if (lowerText.includes('menu') || lowerText.includes('help')  ) {
                 response = getMenuString();
             } else {
                 response = langData.invalid;
