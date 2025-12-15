@@ -4,7 +4,7 @@ const schoolData = {
         welcome: "Hello! I am the School Assistant. Please type the number of your question:",
         invalid: "❌ Invalid number. Please choose a number from the list.",
         notnumber:"To get the answer, please enter the index number.",
-        menu_prompt: "\n\n_Type 'menu' to see options again._",
+        menu_prompt: "\n\nTap the 'menu' button to see the options again.",
         questions: [
             { id: 1, q: "Know Our School ", a: "School Name : Jagruti Uttar Buniyadi Vidhyalay,Vareda Gram Panchayat to Kuba Road, Vareda Village : Vareda, Post- Bepadar, Ta- Saraswati, Dist - Patan oin : 384272 (School Istablish : 1986)" },
             { id: 2, q: "Know Our Principal ", a: "Principal Name : Bhavikkumar Kantilal Patel Contact Number : 9925491242" },
@@ -22,7 +22,7 @@ const schoolData = {
 
         invalid: "❌ अमान्य संख्या। कृपया सूची में से एक संख्या चुनें।",
         notnumber:"उत्तर जानने के लिए कृपया नंबर टाइप करें।",
-        menu_prompt: "\n\n_विकल्पों को फिर से देखने के लिए 'menu' टाइप करें।_",
+        menu_prompt: "\n\nविकल्पों को दोबारा देखने के लिए 'मेनू' बटन पर टैप करें।",
         questions: [
             {
                 id: 1,
@@ -71,7 +71,7 @@ const schoolData = {
         welcome: "નમસ્તે! હું શાળા સહાયક છું. કૃપા કરીને તમારા પ્રશ્નનો નંબર લખો:",
         invalid: "❌ અમાન્ય નંબર. કૃપા કરીને સૂચિમાંથી નંબર પસંદ કરો.",
         notnumber:"જવાબ મેળવવા માટે કૃપા કરીને નંબર ટાઈપ કરો.",
-        menu_prompt: "\n\n_ફરીથી વિકલ્પો જોવા માટે 'menu' લખો._",
+        menu_prompt: "\n\nફરીથી વિકલ્પો જોવા માટે 'menu' બટન પર ટેપ કરો.",
         questions: [
         {
             id: 1,

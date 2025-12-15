@@ -408,7 +408,10 @@ h1 {
     transition: border-color 0.3s;
     margin-bottom:70px;
     }
-
+    .menubuttons{
+        display: flex;
+        gap: 10px;
+    }
     /* .logo img{
         width: 100px;
         height: 100px;
