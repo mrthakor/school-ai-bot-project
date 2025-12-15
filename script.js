@@ -3,15 +3,17 @@ const schoolData = {
     "English": {
         welcome: "Hello! I am the School Assistant. Please type the number of your question:",
         invalid: "❌ Invalid number. Please choose a number from the list.",
+        notnumber:"To get the answer, please enter the index number.",
         menu_prompt: "\n\n_Type 'menu' to see options again._",
         questions: [
             { id: 1, q: "Know Our School ", a: "School Name : Jagruti Uttar Buniyadi Vidhyalay,Vareda Gram Panchayat to Kuba Road, Vareda Village : Vareda, Post- Bepadar, Ta- Saraswati, Dist - Patan (School Istablish : 1986)" },
             { id: 2, q: "Know Our Principal ", a: "The scPrincipal Name : Bhavikkumar Kantilal Patel Contact Number : 9925491242" },
             { id: 3, q: "Know Our Trust ", a: "Jagruti Yuvak Mandal Patan President Name : Keshaji Shankarji Thakor  Contact Number : 9979788132" },
             { id: 4, q: "Know School Staff ", a: "1.Principal : Patel Bhavikkumar Kantilal (contect number: 9925491242) 2.Assistant Teacher Secondary : Thakor Vanrajji Ranchhodji (contect number:9979699747) 3.Assistant Teacher Secondary :Makvana Natvarsinh Ishvarsinh (contect number:9099535475) 4.Assistant Teacher Secondary : Dabhi Nilaben Dayalbhai (contect number:9723055820) 5.Assistant Teacher Higher : Parmar Rameshbhai Dhanjibhai (contect number:7600300745) 6.Assistant Teacher Higher : Gohil Nitaben Naranbhai (contect number:9227234659) 7. Assistant Teacher Higher : Acharya Vijaykumar Bharatkumar (contect number:9925168162) 8.Clerk : Raval Harshilkumar Chandrakantbhai (contect number:8905454015) 9. Vocational Trainer : Maheshkumar Ranchhodji Thakor (contect number:9998387612)" },
-            { id: 5, q: "Know Class Teacher  ", a: "Std 9 : Nitaben Gohil (Contact Number:9227234659):  Std10 : Nilaben Dabhi1 (contect number:9723055820) Std11 :Vijaykumar Acharya (contect number:9925168162) Std12 :Parmar Rameshbhai (contect number:7600300745)" },
+            { id: 5, q: "Know Class Teacher  ", a: "stander 9 : Nitaben Gohil (Contact Number:9227234659):  stander 10 : Nilaben Dabhi1 (contect number:9723055820) stander 11 :Vijaykumar Acharya (contect number:9925168162) stander 12 :Parmar Rameshbhai (contect number:7600300745)" },
             { id: 6, q: "Know School Activity ", a: "1.Morning Prarthana : Prarthana With Music, News Reading, General Knowladge Quations And Answer, National Anthem Song,Day Celebration, MD Priode Activities Like, GK Games, Quize Compition, Different types of Games, " },
             { id: 7, q: "Know School Campus ", a: "1. Principal Office 2. Staff Room 3. Sport Room 4. Library 5. Science Lab 6. IT Computer Lab 7. Girls Room 8. Water Room 9.Seprate Washroom for Girls & Boys 10.Class Rooms 11. Sport Ground for Kabbadi, kho-kho, Cricket, Voliball, Long Jump, High Jump,  " },
+            { id: 8, q: "Know School Timing ", a: "Morning School Timing is 7:00AM to 12:30AM  Evening School Timing is 10:50AM to 05:00PM Saturday School Timing :07:15AM to 11:30AM" },
             // Add more English questions here...
         ]
     },
@@ -19,6 +21,7 @@ const schoolData = {
         welcome: "नमस्ते! मैं स्कूल असिस्टेंट हूं। कृपया अपने प्रश्न का नंबर टाइप करें:",
 
         invalid: "❌ अमान्य संख्या। कृपया सूची में से एक संख्या चुनें।",
+        notnumber:"उत्तर जानने के लिए कृपया नंबर टाइप करें।",
         menu_prompt: "\n\n_विकल्पों को फिर से देखने के लिए 'menu' टाइप करें।_",
         questions: [
             {
@@ -55,13 +58,19 @@ const schoolData = {
                 id: 7,
                 q: "विद्यालय परिसर के बारे में जानें",
                 a: "1. प्रधानाचार्य कार्यालय 2. स्टाफ रूम 3. खेल कक्ष (Sport Room) 4. पुस्तकालय 5. विज्ञान प्रयोगशाला 6. आईटी कंप्यूटर लैब 7. छात्राओं का कक्ष (Girls Room) 8. जल कक्ष 9. छात्र और छात्राओं के लिए अलग शौचालय 10. कक्षाएँ 11. कबड्डी, खो-खो, क्रिकेट, वॉलीबॉल, लंबी कूद, ऊंची कूद के लिए खेल का मैदान।"
+            },
+            { 
+            id: 8, 
+            q: "विद्यालय के समय के बारे में जानें", 
+            a: "सुबह के विद्यालय का समय 7:00AM से 12:30PM है, शाम के विद्यालय का समय 10:50AM से 05:00PM है, शनिवार विद्यालय का समय : 07:15AM से 11:30AM है" 
             }
-             // Add more Hindi questions here...
+                        // Add more Hindi questions here...
         ]
     },
     "Gujarati": {
         welcome: "નમસ્તે! હું શાળા સહાયક છું. કૃપા કરીને તમારા પ્રશ્નનો નંબર લખો:",
         invalid: "❌ અમાન્ય નંબર. કૃપા કરીને સૂચિમાંથી નંબર પસંદ કરો.",
+        notnumber:"જવાબ મેળવવા માટે કૃપા કરીને નંબર ટાઈપ કરો.",
         menu_prompt: "\n\n_ફરીથી વિકલ્પો જોવા માટે 'menu' લખો._",
         questions: [
         {
@@ -98,6 +107,11 @@ const schoolData = {
             id: 7,
             q: "શાળાના કેમ્પસ વિશે જાણો",
             a: "1. આચાર્ય ઓફિસ 2. સ્ટાફ રૂમ 3. સ્પોર્ટ રૂમ (રમતગમત ખંડ) 4. લાયબ્રેરી 5. વિજ્ઞાન પ્રયોગશાળા 6. IT કોમ્પ્યુટર લેબ 7. ગર્લ્સ રૂમ 8. વોટર રૂમ 9. કુમાર અને કન્યાઓ માટે અલગ શૌચાલય 10. વર્ગખંડો 11. કબડ્ડી, ખો-ખો, ક્રિકેટ, વોલીબોલ, લાંબી કૂદ, ઊંચી કૂદ માટે રમતનું મેદાન."
+        },
+        { 
+        id: 8, 
+        q: "શાળાના સમય વિશે જાણો", 
+        a: "સવારની શાળાનો સમય 7:00AM થી 12:30PM છે, સાંજની શાળાનો સમય 10:50AM થી 05:00PM છે, શનિવારે શાળાનો સમય : 07:15AM થી 11:30AM છે" 
         }
         ]
              // Add more Gujarati questions here...
@@ -209,7 +223,6 @@ function sendMessage(voiceText = null) {
         
         let response = "";
         const choice = parseInt(text);
-
         // LOGIC: Check number vs Array
         if (!isNaN(choice)) {
             if (choice >= 1 && choice <= questionList.length) {
@@ -218,13 +231,16 @@ function sendMessage(voiceText = null) {
                 if(selectedQ) {
                     response = selectedQ.a + langData.menu_prompt;
                 }
-            } else {
+            }else{
                 response = langData.invalid;
             }
-        } else {
+        }else if(isNaN(choice)) {
+                response =langData.notnumber;
+        }
+         else {
             // Basic Keyword matching
         
-        var menubutton=menubtn
+        //var menubutton=menubtn
             const lowerText = text.toLowerCase();
             if (lowerText.includes('menu') || lowerText.includes('help')  ) {
                 response = getMenuString();
