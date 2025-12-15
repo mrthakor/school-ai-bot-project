@@ -6,11 +6,11 @@ const schoolData = {
         notnumber:"To get the answer, please enter the index number.",
         menu_prompt: "\n\n_Type 'menu' to see options again._",
         questions: [
-            { id: 1, q: "Know Our School ", a: "School Name : Jagruti Uttar Buniyadi Vidhyalay,Vareda Gram Panchayat to Kuba Road, Vareda Village : Vareda, Post- Bepadar, Ta- Saraswati, Dist - Patan (School Istablish : 1986)" },
-            { id: 2, q: "Know Our Principal ", a: "The scPrincipal Name : Bhavikkumar Kantilal Patel Contact Number : 9925491242" },
+            { id: 1, q: "Know Our School ", a: "School Name : Jagruti Uttar Buniyadi Vidhyalay,Vareda Gram Panchayat to Kuba Road, Vareda Village : Vareda, Post- Bepadar, Ta- Saraswati, Dist - Patan oin : 384272 (School Istablish : 1986)" },
+            { id: 2, q: "Know Our Principal ", a: "Principal Name : Bhavikkumar Kantilal Patel Contact Number : 9925491242" },
             { id: 3, q: "Know Our Trust ", a: "Jagruti Yuvak Mandal Patan President Name : Keshaji Shankarji Thakor  Contact Number : 9979788132" },
             { id: 4, q: "Know School Staff ", a: "1.Principal : Patel Bhavikkumar Kantilal (contect number: 9925491242) 2.Assistant Teacher Secondary : Thakor Vanrajji Ranchhodji (contect number:9979699747) 3.Assistant Teacher Secondary :Makvana Natvarsinh Ishvarsinh (contect number:9099535475) 4.Assistant Teacher Secondary : Dabhi Nilaben Dayalbhai (contect number:9723055820) 5.Assistant Teacher Higher : Parmar Rameshbhai Dhanjibhai (contect number:7600300745) 6.Assistant Teacher Higher : Gohil Nitaben Naranbhai (contect number:9227234659) 7. Assistant Teacher Higher : Acharya Vijaykumar Bharatkumar (contect number:9925168162) 8.Clerk : Raval Harshilkumar Chandrakantbhai (contect number:8905454015) 9. Vocational Trainer : Maheshkumar Ranchhodji Thakor (contect number:9998387612)" },
-            { id: 5, q: "Know Class Teacher  ", a: "stander 9 : Nitaben Gohil (Contact Number:9227234659):  stander 10 : Nilaben Dabhi1 (contect number:9723055820) stander 11 :Vijaykumar Acharya (contect number:9925168162) stander 12 :Parmar Rameshbhai (contect number:7600300745)" },
+            { id: 5, q: "Know Class Teacher  ", a: "Standard 9 : Nitaben Gohil (Contact Number:9227234659):  Standard 10 : Nilaben Dabhi (contect number:9723055820) Standard 11 :Vijaykumar Acharya (contect number:9925168162) Standard 12 :Parmar Rameshbhai (contect number:7600300745)" },
             { id: 6, q: "Know School Activity ", a: "1.Morning Prarthana : Prarthana With Music, News Reading, General Knowladge Quations And Answer, National Anthem Song,Day Celebration, MD Priode Activities Like, GK Games, Quize Compition, Different types of Games, " },
             { id: 7, q: "Know School Campus ", a: "1. Principal Office 2. Staff Room 3. Sport Room 4. Library 5. Science Lab 6. IT Computer Lab 7. Girls Room 8. Water Room 9.Seprate Washroom for Girls & Boys 10.Class Rooms 11. Sport Ground for Kabbadi, kho-kho, Cricket, Voliball, Long Jump, High Jump,  " },
             { id: 8, q: "Know School Timing ", a: "Morning School Timing is 7:00AM to 12:30AM  Evening School Timing is 10:50AM to 05:00PM Saturday School Timing :07:15AM to 11:30AM" },
@@ -27,7 +27,7 @@ const schoolData = {
             {
                 id: 1,
                 q: "हमारे विद्यालय के बारे में जानें",
-                a: "विद्यालय का नाम : जागृति उत्तर बुनियादी विद्यालय, वारेडा ग्राम पंचायत से कुबा रोड, गाँव : वरेडा, पोस्ट- बेपादर, तहसील- सरस्वती, जिला - पाटन (विद्यालय स्थापना : 1986)"
+                a: "विद्यालय का नाम : जागृति उत्तर बुनियादी विद्यालय, वारेडा ग्राम पंचायत से कुबा रोड, गाँव : वारेडा, पोस्ट- बेपादर, तहसील- सरस्वती, जिला - पाटन 384272 (विद्यालय स्थापना : 1986)"
             },
             {
                 id: 2,
@@ -76,7 +76,7 @@ const schoolData = {
         {
             id: 1,
             q: "અમારી શાળા વિશે જાણો",
-            a: "શાળાનું નામ : જાગૃતિ ઉત્તર બુનિયાદી વિદ્યાલય, વારેડા ગ્રામ પંચાયત થી કુબા રોડ, ગામ : વરેડા, પોસ્ટ- બેપાદર, તાલુકો- સરસ્વતી, જીલ્લો - પાટણ (શાળા સ્થાપના : 1986)"
+            a: "શાળાનું નામ : જાગૃતિ ઉત્તર બુનિયાદી વિદ્યાલય, વારેડા ગ્રામ પંચાયત થી કુબા રોડ, ગામ : વરેડા, પોસ્ટ- બેપાદર, તાલુકો- સરસ્વતી, જીલ્લો - પાટણ 384272 (શાળા સ્થાપના : 1986)"
         },
         {
             id: 2,
@@ -202,7 +202,15 @@ function toggleMenu() {
 function handleKeyPress(event) { 
     if (event.key === 'Enter') sendMessage();
 }
-
+ document.addEventListener('DOMContentLoaded', function() {
+            const menubutton = document.getElementById('menubar');
+                    menubutton.addEventListener('click', function() {
+                        // When the button is clicked, trigger the menu display function
+                        const response = getMenuString(); 
+                        addMessage(response, false);
+                    });
+});
+// 3. Show Bot Response
 function sendMessage(voiceText = null) {
     const text = voiceText || userInput.value.trim();
     if (!text) return;
@@ -223,6 +231,7 @@ function sendMessage(voiceText = null) {
         
         let response = "";
         const choice = parseInt(text);
+        const lowerText = text.toLowerCase();
         // LOGIC: Check number vs Array
         if (!isNaN(choice)) {
             if (choice >= 1 && choice <= questionList.length) {
@@ -234,15 +243,13 @@ function sendMessage(voiceText = null) {
             }else{
                 response = langData.invalid;
             }
-        }else if(isNaN(choice)) {
+        }else if(!(lowerText.includes('menu')) ) {
                 response =langData.notnumber;
         }
          else {
             // Basic Keyword matching
-        
-        //var menubutton=menubtn
             const lowerText = text.toLowerCase();
-            if (lowerText.includes('menu') || lowerText.includes('help')  ) {
+            if (lowerText.includes('menu') || lowerText.includes('help')) {
                 response = getMenuString();
             } else {
                 response = langData.invalid;
