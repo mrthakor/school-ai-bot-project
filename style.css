@@ -326,7 +326,6 @@ h1 {
     align-items: center;
     padding: 5px 5px 5px 15px;
     transition: border-color 0.3s;
-    margin-bottom:70px;
 }
 
 .input-wrapper:focus-within {
@@ -399,6 +398,16 @@ h1 {
     h1 { font-size: 2.5rem; padding: 0 20px; }
     .chat-container { width: 95%; height: 500px; }
     .message-bubble { max-width: 90%; font-size: 0.9rem; }
+    .input-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 15px;
+    transition: border-color 0.3s;
+    margin-bottom:70px;
+    }
 
     /* .logo img{
         width: 100px;
