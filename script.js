@@ -179,7 +179,11 @@ window.addEventListener("load", function() {
         elements.forEach(el => el.classList.add('dark-mode'));
     }
 });
-
+const nav = document.getElementById('navLinks');
+function toggleMenu() {
+    nav.classList.toggle('active');
+}
+ 
 // --- CORE CHAT LOGIC ---
 function handleKeyPress(event) { 
     if (event.key === 'Enter') sendMessage();

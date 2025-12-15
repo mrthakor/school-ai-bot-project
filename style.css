@@ -105,10 +105,10 @@ header {
 }  
 .menu-toggle {
     display: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     background: none;
     border: none;
-    color: white;
+    color: rgb(53, 53, 53);
     cursor: pointer;
 }
 
@@ -326,6 +326,7 @@ h1 {
     align-items: center;
     padding: 5px 5px 5px 15px;
     transition: border-color 0.3s;
+    margin-bottom:60px;
 }
 
 .input-wrapper:focus-within {
@@ -387,6 +388,7 @@ h1 {
         backdrop-filter: blur(20px);
         padding: 20px;
         border-bottom: 1px solid var(--glass-border);
+        border-radius:32px;
     }
     .nav-links a:hover{
         color: rgb(56, 131, 163);
